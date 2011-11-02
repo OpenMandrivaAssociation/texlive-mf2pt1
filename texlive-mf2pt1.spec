@@ -10,7 +10,7 @@ Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mf2pt1.doc.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(post):	texlive-tlpkg
-Requires:	texlive-mf2pt1.bin
+Provides:	texlive-mf2pt1.bin = %{EVRD}
 Conflicts:	texlive-texmf <= 20110705-3
 Conflicts:	texlive-doc <= 20110705-3
 
@@ -42,6 +42,7 @@ which convert bitmaps to outline fonts.
 
 #-----------------------------------------------------------------------
 %files
+%{_bindir}/mf2pt1
 %{_texmfdistdir}/metapost/mf2pt1/mf2pt1.mp
 %{_texmfdistdir}/scripts/mf2pt1/mf2pt1.pl
 %doc %{_texmfdistdir}/doc/support/mf2pt1/ChangeLog
@@ -57,6 +58,10 @@ which convert bitmaps to outline fonts.
 %build
 
 %install
+mkdir -p %{buildroot}%{_bindir}
+pushd %{buildroot}%{_bindir}
+    ln -sf %{_texmfdistdir}/metapost/mf2pt1/mf2pt1.pl mf2pt1
+popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_infodir}
