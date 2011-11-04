@@ -1,3 +1,9 @@
+# revision 24109
+# category Package
+# catalog-ctan /support/mf2pt1
+# catalog-date 2011-08-08 12:15:22 +0200
+# catalog-license lppl
+# catalog-version 2.4.5
 Name:		texlive-mf2pt1
 Version:	2.4.5
 Release:	1
@@ -50,6 +56,7 @@ which convert bitmaps to outline fonts.
 %doc %{_texmfdistdir}/doc/support/mf2pt1/mf2pt1.pdf
 %doc %{_texmfdistdir}/doc/support/mf2pt1/mf2pt1.texi
 %doc %{_infodir}/mf2pt1.info*
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -66,3 +73,5 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_infodir}
 mv %{buildroot}%{_texmfdir}/doc/info/*.info %{buildroot}%{_infodir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
