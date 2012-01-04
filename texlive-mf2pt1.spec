@@ -19,6 +19,8 @@ Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Provides:	texlive-mf2pt1.bin = %{EVRD}
 
+%define		_unpackaged_subdirs_terminate_build	0
+
 %description
 mf2pt1 facilitates producing PostScript Type 1 fonts from a
 Metafont source file. It is not, as the name may imply, an
