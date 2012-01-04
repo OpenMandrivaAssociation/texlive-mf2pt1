@@ -6,7 +6,7 @@
 # catalog-version 2.4.5
 Name:		texlive-mf2pt1
 Version:	2.4.5
-Release:	1
+Release:	2
 Summary:	Produce PostScript Type 1 fonts from Metafont source
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/mf2pt1
