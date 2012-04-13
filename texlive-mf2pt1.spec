@@ -1,12 +1,12 @@
-# revision 24109
+# revision 25811
 # category Package
 # catalog-ctan /support/mf2pt1
-# catalog-date 2011-08-08 12:15:22 +0200
+# catalog-date 2012-03-24 19:01:35 +0100
 # catalog-license lppl
-# catalog-version 2.4.5
+# catalog-version 2.4.6
 Name:		texlive-mf2pt1
-Version:	2.4.5
-Release:	2
+Version:	2.4.6
+Release:	1
 Summary:	Produce PostScript Type 1 fonts from Metafont source
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/mf2pt1
@@ -18,8 +18,6 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Provides:	texlive-mf2pt1.bin = %{EVRD}
-
-%define		_unpackaged_subdirs_terminate_build	0
 
 %description
 mf2pt1 facilitates producing PostScript Type 1 fonts from a
