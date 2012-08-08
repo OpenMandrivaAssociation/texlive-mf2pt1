@@ -1,11 +1,11 @@
-# revision 25811
+# revision 27032
 # category Package
 # catalog-ctan /support/mf2pt1
-# catalog-date 2012-03-24 19:01:35 +0100
+# catalog-date 2012-07-03 01:53:19 +0200
 # catalog-license lppl
-# catalog-version 2.4.6
+# catalog-version 2.5
 Name:		texlive-mf2pt1
-Version:	2.4.6
+Version:	2.5
 Release:	1
 Summary:	Produce PostScript Type 1 fonts from Metafont source
 Group:		Publishing
