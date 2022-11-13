@@ -1,19 +1,13 @@
-# revision 33802
-# category Package
-# catalog-ctan /support/mf2pt1
-# catalog-date 2014-05-02 06:53:00 +0200
-# catalog-license lppl
-# catalog-version 2.5a
 Name:		texlive-mf2pt1
 Epoch:		1
-Version:	2.5a
-Release:	5
+Version:	61217
+Release:	1
 Summary:	Produce PostScript Type 1 fonts from Metafont source
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/mf2pt1
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mf2pt1.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mf2pt1.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mf2pt1.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mf2pt1.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -31,12 +25,12 @@ reverse-engineered by TeXtrace, mftrace, and other programs
 which convert bitmaps to outline fonts.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -51,14 +45,14 @@ which convert bitmaps to outline fonts.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/mf2pt1/mf2pt1.pl mf2pt1
+ln -sf %{_texmfdistdir}/scripts/mf2pt1/mf2pt1.pl mf2pt1
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
