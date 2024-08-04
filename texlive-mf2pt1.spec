@@ -1,7 +1,7 @@
 Name:		texlive-mf2pt1
 Epoch:		1
-Version:	61217
-Release:	2
+Version:	71883
+Release:	1
 Summary:	Produce PostScript Type 1 fonts from Metafont source
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/mf2pt1
