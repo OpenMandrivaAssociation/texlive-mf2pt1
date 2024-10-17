@@ -4,7 +4,7 @@ Version:	71883
 Release:	1
 Summary:	Produce PostScript Type 1 fonts from Metafont source
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/support/mf2pt1
+URL:		https://www.ctan.org/tex-archive/support/mf2pt1
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mf2pt1.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mf2pt1.doc.r%{version}.tar.xz
