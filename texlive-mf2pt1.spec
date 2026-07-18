@@ -1,5 +1,6 @@
 %global tl_name mf2pt1
 %global tl_revision 71883
+%global tl_bin_links mf2pt1:%{_texmfdistdir}/scripts/mf2pt1/mf2pt1.pl
 
 Name:		texlive-%{tl_name}
 Epoch:		1
@@ -15,6 +16,8 @@ BuildArch:	noarch
 BuildSystem:	texlive
 Requires:	texlive(mf2pt1.bin)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}.bin) = %{tl_revision}
+Provides:	texlive-%{tl_name}.bin = %{EVRD}
 
 %description
 mf2pt1 is a Perl script that facilitates producing PostScript Type 1
